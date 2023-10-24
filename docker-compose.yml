@@ -29,9 +29,6 @@ services:
     ports:
       - "5432:5432"
     restart: unless-stopped
-    build:
-      context: .
-      dockerfile: data-push.dockerfile
     volumes:
       - database_data:/var/lib/postgresql/data
 
