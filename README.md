@@ -24,25 +24,24 @@ This project is designed to process road links data from a text file, load it in
 
 ## File Processing and Loading
 
-1. **Python Script**: Run the Python script `processing-loading.py` to read the provided text file containing road links data and parse it to extract road_id, Direction, and polyline data.
+1. **Python Script**: Run the Python script `processing-loading.py` to read the provided text file containing road links data and parse it to extract road_id, Direction, and polyline data. The table is created using the SQL command in processing-loading.py.
 
    ```bash
    python processing-loading.py
-
-The table is created using the SQL command in processing-loading.py :
+2. The table is created using the SQL command in processing-loading.py.
    ```bash
    CREATE TABLE road_links (
     road_id VARCHAR(50),
     direction INT,
     polyline TEXT[]
-);
+   );
 
 ## Usage
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/SpacemanLogic/road_link_data.git
-   cd docker-jupyter-compose
-2. Create a requirements.txt file in the project directory with the Python packages you want to install. For example:
+   cd road_link_data
+2. A requirements.txt file in the project directory with the Python packages you want to install. For example:
    ```bash
    numpy
    pandas
