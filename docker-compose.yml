@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  python-roadlinks-app:
+    build:
+      context: .
+      dockerfile: processing-loading.dockerfile
+    #environment:
+    #  - POSTGRES_HOST=postgres
+    image: python-roadlinks-app
+    container_name: python-roadlinks-app
+    #restart: always
+    depends_on:
+      - postgres
+  postgres:
+    #hostname: postgres
+    image: postgres
+    container_name: ${CONTAINER_NAME}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: data-push.dockerfile
+    volumes:
+      #- postgres:/var/lib/postgresql/data
+      - database_data:/var/lib/postgresql/data
+      #- ./sql_table_create.sql:/docker-entrypoint-initdb.d/sql_table_create.sql
+
+volumes:
+  database_data:
+    driver: local
