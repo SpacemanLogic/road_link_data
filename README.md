@@ -17,6 +17,7 @@ This project is designed to process road links data from a text file, load it in
 ## Requirements
 
 - **Docker**: To create a containerized environment for this project.
+- **Docker-Compose**: For managing multi-container Docker applications.
 - **Python 3**: To execute the file processing and data visualization scripts.
 - **PostgreSQL**: To set up a database for storing road links data.
 - **Jupyter Notebook**: To create data visualizations.
