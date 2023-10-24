@@ -1,4 +1,3 @@
-#FROM jupyter/scipy-notebook
 FROM jupyter/base-notebook
 # Set the working directory
 WORKDIR /home/jovyan/work/
