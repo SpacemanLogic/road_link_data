@@ -17,6 +17,8 @@ services:
     image: compose-test
     container_name: jupyter-server
     restart: always
+    port:
+      - 5432:5432
     depends_on:
       - postgres
   postgres:
