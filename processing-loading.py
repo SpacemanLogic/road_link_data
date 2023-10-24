@@ -77,5 +77,4 @@ def push_data(data):
     conn.close()
 
 if __name__ == '__main__':
-    #create_table()
     read_file(file_path)
