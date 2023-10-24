@@ -22,12 +22,20 @@ This project is designed to process road links data from a text file, load it in
 - **PostgreSQL**: To set up a database for storing road links data.
 - **Jupyter Notebook**: To create data visualizations.
 
-## File Processing
+## File Processing and Loading
 
 1. **Python Script**: Run the Python script `processing-loading.py` to read the provided text file containing road links data and parse it to extract road_id, Direction, and polyline data.
 
    ```bash
    python processing-loading.py
+
+The table is created using the SQL command in processing-loading.py :
+   ```bash
+   CREATE TABLE road_links (
+    road_id VARCHAR(50),
+    direction INT,
+    polyline TEXT[]
+);
 
 ## Usage
 1. Clone this repository to your local machine:
