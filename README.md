@@ -12,7 +12,7 @@ This Docker Compose project provides a simple setup for running a Jupyter Notebo
    git clone https://github.com/yourusername/docker-jupyter-compose.git
    cd docker-jupyter-compose
 Create a requirements.txt file in the project directory with the Python packages you want to install. For example:
-
+2. Create a requirements.txt file in the project directory with the Python packages you want to install. For example:
    '''bash
    numpy
    pandas
