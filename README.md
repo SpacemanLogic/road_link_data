@@ -24,7 +24,10 @@ This Docker Compose project provides a simple setup for running a Jupyter Notebo
 
 You can now create, open, and work on Jupyter Notebooks within the /home/jovyan/work directory. Any notebooks you create or files you upload will be saved in this directory on your local machine.
 
-4. To stop the Jupyter server and remove the container, use:
+4. To start the Jupyter server, use:
    ```bash
-   docker-compose down
+   docker-compose up -d
+   
+5. To stop the Jupyter server and remove the container, use:
+   ```bash
    docker-compose down
