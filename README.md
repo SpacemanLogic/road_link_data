@@ -13,10 +13,10 @@ This Docker Compose project provides a simple setup for running a Jupyter Notebo
    cd docker-jupyter-compose
 Create a requirements.txt file in the project directory with the Python packages you want to install. For example:
 
-'''bash
-numpy
-pandas
-matplotlib
+   '''bash
+   numpy
+   pandas
+   matplotlib
 Build the Docker image and start the Jupyter Notebook server:
 
 '''bash
@@ -29,4 +29,3 @@ You can now create, open, and work on Jupyter Notebooks within the /home/jovyan/
 To stop the Jupyter server and remove the container, use:
 '''bash
 docker-compose down
-
